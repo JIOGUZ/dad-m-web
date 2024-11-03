@@ -1,1 +1,485 @@
+﻿@charset "utf-8";
 
+.caja_principal{   /*comprende toda la caja -contenedor de contenedores*/
+	width: 1340px;
+	height:850px;
+	margin-top: 25px;
+    margin-left: 12.5px;
+    margin-right: 12.5px;
+    margin-bottom: 25px;
+    border-radius: 35px;
+	position:static;
+	border: 1px;
+	background-color: black;
+	
+        } 
+
+   .mastil{       /*primera caja*/
+	    position:static;
+	    width: 1280px;
+		height: 190px;
+		border: 1px solid #0000FF;  /*Bordes azules*/
+	    background-color: black;
+		padding: 0.5px;
+	    font-family: Garamond;
+	    border-radius: 35px 35px 0 0;
+		border-top-width: 7px;
+        border-bottom-width: 3px;
+        border-right-width: 3px;
+        border-left-width: 3px;
+        margin-left: 24px;
+        margin-right: 10px;
+        margin-top: 5px;
+        } 
+
+        /* Establece el estilo para el título */
+    #titulo_text {
+        animation-duration: 3s;
+        animation-name: deslizar;
+	     width: 378.5px;
+         height: 95px;
+         margin: 0.5px;
+         margin-left: 25px;
+         border-right-width: 0px;
+         padding-top: 0.5px;
+         padding-right: 700px; /*790*/
+         color: #FFD700; /*#C60*/
+         font-family: Garamond;
+         font-size: 40px;
+        }
+        #titulo_text-q,
+        #titulo_text-i {
+            animation-duration: 3s;
+            animation-name: deslizar;
+             width: 378.5px;
+             height: 95px;
+             margin: 0.5px;
+             margin-left: 25px;
+             border-right-width: 0px;
+             padding-top: 0.5px;
+             padding-right: 700px; /*790*/
+             color: #FFD700; /*#C60*/
+             font-family: Garamond;
+             font-size: 24px;
+            }
+
+    @keyframes deslizar{
+        from{
+            margin-left: 100%;
+            width: 300%;
+        }
+        to{
+            margin-left: 0%;
+            width: 100%;
+        }
+    }
+		#logo {
+           margin-bottom: 4px;
+           margin-left: 1160px;
+           border-bottom-width: 0px;
+           border-bottom-style: solid;
+           padding-bottom: 0px;
+           margin-top: -88px;        
+        } 
+		#listbox1,
+	    #listbox2,
+	    #listbox3,
+	    #listbox4{
+		    align-items: center;
+		    font-family: Garamond;
+	        font-size: 20px; 	    
+	        color:#FFD700;
+	        border-color:#03F; 
+	        background-color: #000;
+		    border-radius: 15px;
+	    }
+	
+H1{color:#FFD700;}
+	/*.boton_A {
+	    
+	    
+        }*/
+
+		#boton5 {
+			  margin-left: 714px;
+		      font-family: Garamond-bold;
+	          font-size: 24px;
+			  color: #FFD700;
+              border-color:rgb(238, 239, 243); 
+	          background-color: #1E90FF;
+			  border-radius: 15px;
+			  cursor: pointer;
+		  }
+		
+		#boton6{
+			 margin-left: 49px;
+			 font-family: Garamond-bold;
+	         font-size: 24px;
+			 color: #FFD700;
+             border-color:rgb(228, 230, 236); 
+	         background-color: #1E90FF;
+			 border-radius: 15px 15px 15px 15px;
+			 cursor: pointer;
+			
+		  }
+
+		#boton7{  /*boton Index*/
+			  margin-left: 49px;
+			 font-family: Garamond-bold;
+	         font-size: 24px;
+			 color: #FFD700;
+             border-color:rgb(229, 231, 236); 
+	         background-color:#1E90FF;
+			 border-radius: 15px 15px 15px 15px;
+			 cursor: pointer;
+			
+			
+		  }
+
+        #boton8 {
+              position: absolute;
+              z-index: 4; /* Asegura que el botón esté sobre todos los demás elementos */
+              font-family: Garamond-bold;
+              font-size: 24px;
+              color: #FFD700;
+              background-color: #f4f5f7;
+              border: 2px solid rgb(232, 234, 241); /* Establece el grosor y el estilo del borde */
+              border-radius: 15px; /* Aplica el radio de borde uniformemente */
+              cursor: pointer;
+              margin-left: 1015px;
+              margin-top: 380px;
+              padding: 10px; /* Ajusta el espacio interno del botón */
+          }
+		  
+   .sin-puntos {
+    list-style-type: none;
+     }
+	  
+
+     .busqueda-i {
+        width: 288px;
+        height: 501px;
+        top: 232px;
+        margin-right: 4px;
+        margin-left: 24px;
+        border: 1px solid #0000FF; /* Bordes azules */
+        background-color: #1E90FF; 
+        position: absolute;
+        padding: 3px;
+        left: 23px;
+        border-top-width: 7px;
+        border-radius: 0;
+    }
+      	
+	.boton_B {
+	    cursor: pointer;
+	    font-family: Garamond;
+	    font-size: 24px;
+	    /*color: #C60;*/
+	    color: #FFD700;
+		caret-color: #C60;
+	    border-color:#00FFFF; 
+	    background-color: #1E90FF;
+	    height: 30px;
+	    width: 208px;
+	    border-radius: 15px 15px 15px 15px;
+	    
+        }
+	    
+	.box_search,
+    .box_search-D{
+			 border-left-width: 40px;
+             border-left-style: solid;
+			 font-family: Garamond;
+	         font-size: 24px;
+			 margin-left: -22px;
+			 color: black;
+             border: 1px solid #0000FF; /*Bordes azules*/ 
+	         background-color:#FFF;
+			 cursor: pointer;
+			 border-radius: 15px 15px 15px 15px;
+           }
+    .box_search-D{
+            margin-left: 24px;
+          }
+
+		#b_search,
+        #b_search-D{
+			font-family: Garamond;
+	        font-size: 24px;
+			color:#FFD700;
+			border: 1px solid #0000FF;
+            border-color:#00FFFF; 
+	        background-color: #000;
+			margin-left: -32px;
+			cursor: pointer;
+			border-left-width: 2px;
+            border-left-style: solid;
+            padding-left: 4px;
+            border-top-width: 2px;
+            border-top-style: solid;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            border-bottom-width: 2px;
+            border-bottom-style: solid;
+            padding-right: 4px;
+            border-right-width: 2px;
+            border-right-style: solid;
+            margin-top: 10px;
+            margin-bottom: 25px;
+			border-radius: 15px 15px 15px 15px;
+		}
+        #b_search-D{margin-left: 51px;}
+	    #boton1{
+			border: 1px solid #0000FF;
+			border-left-width: 4px;
+            border-left-style: solid;
+			margin-top: 15px;
+            padding-left: 2px;
+            margin-left: 45px;
+            margin-bottom: 3px;
+            border-bottom-width: 2px;
+            border-bottom-style: solid;
+            padding-bottom: 1px;
+            padding-top: 1px;
+            border-top-width: 2px;
+            border-top-style: solid;
+            padding-right: 4px;
+            border-right-width: 2px;
+            border-right-style: solid;
+			font-family: Garamond;
+	        font-size: 24px;
+			color: #FFD700;
+            border-color:#00FFFF; 
+	        background-color: #1E90FF;
+			border-radius: 15px 15px 15px 15px;
+			cursor: pointer;
+		}
+
+		#boton2{
+			 
+             margin-left: 64px;
+             margin-top: 15px;;
+			 border: 1px solid #0000FF;
+             border-left-width: 2px;
+             border-left-style: solid;
+             padding-left: 4px;
+             border-bottom-width: 2px;
+             border-bottom-style: solid;
+             padding-bottom: 1px;
+             padding-top: 1px;
+             border-top-width: 2px;
+             border-top-style: solid;
+             padding-right: 4px;
+             border-right-width: 2px;
+             border-right-style: solid;
+             margin-bottom: 3px;
+			 font-family: Garamond;
+	         font-size: 24px;
+			 color: #FFD700;
+             border-color:#00FFFF; 
+	         background-color: #1E90FF;
+			 border-radius: 15px 15px 15px 15px;
+			cursor: pointer;
+		}
+
+		#boton3{
+			margin-left: 64px;
+            margin-top: 15px;
+			border: 1px solid #0000FF;
+            border-left-width: 2px;
+            border-left-style: solid;
+            padding-left: 4px;
+            border-bottom-width: 2px;
+            border-bottom-style: solid;
+            padding-bottom: 1px;
+            padding-top: 1px;
+            border-top-width: 2px;
+            border-top-style: solid;
+            padding-right: 4px;
+            border-right-width: 2px;
+            border-right-style: solid;
+			font-family: Garamond;
+	        font-size: 24px;
+			color: #FFD700;
+            border-color:#00FFFF; 
+	        background-color: #1E90FF;
+			border-radius: 15px 15px 15px 15px;
+			cursor: pointer;
+		}
+
+		#boton4{
+			border-left-width: 4px;
+            border-left-style: solid;
+            padding-left: 2px;
+			border: 1px solid #0000FF;
+			margin-top: 15px;
+            margin-left: 64px;
+            margin-bottom: 3px;
+            border-bottom-width: 2px;
+            border-bottom-style: solid;
+            padding-bottom: 1px;
+            padding-top: 1px;
+            border-top-width: 2px;
+            border-top-style: solid;
+            padding-right: 4px;
+            border-right-width: 2px;
+            border-right-style: solid;
+			font-family: Garamond;
+	        font-size: 24px;
+			color:#FFD700;
+            border-color:#00FFFF; 
+	        background-color: #1E90FF;
+			border-radius: 15px 15px 15px 15px;
+			cursor: pointer;
+		}
+
+        #robot{
+	        width: 291px;
+            height: 305.017px;
+			margin-left: -40px;
+        }
+
+        #robotD{
+			top: -3px;
+	        width: 291px;
+            height: 295.017px;
+			margin-left: -40px;
+        }
+
+p{
+	font-size: 18px;
+	font-family: garamond-bold;
+	align-content:space-between;
+	background-color: #1E90FF;
+}
+
+		
+.texto-box {
+           font-family: Garamond-bold;
+	        font-size: 14px;
+			color:#FFD700;
+            border-color:#03F; 
+	        background-color: #1E90FF;
+			border-radius: 15px 15px 15px 15px;
+        }
+		
+    		
+.escritorio {
+	
+    display: inline-block; /* Para que el div ajuste su tamaño al contenido */
+    width: 62.5%;
+    height: 510px;
+	margin-right: 2px;
+	margin-left: 0px;
+    border: 1px solid #0000FF; /*Bordes azules*/
+    position: absolute;
+    right: 55px;
+	padding-left: 38px;
+	top: 231px;
+    left: 348.1px;
+    border-top-width: 7px;
+	border-radius: 0;
+	
+
+        }
+		
+		#fondo {
+	        position:absolute;
+	        z-index: 2; /* Asegura que el fondo esté detrás del video */
+	        width: 967px;
+	        height: 508px;
+	        margin-left: -25px;
+	        margin-top: 1px;
+	        padding-right: 0px;
+	        border-radius: 0;
+	        font-family: Garamond;
+	        color: #FFF;
+	        background-image: url("../Img/dadm web2.jpg");
+	        background-repeat: no-repeat;
+			left: 27px; 
+			top: -0.5px; 
+            cursor: pointer;
+
+		} 
+		
+		#video1{ 			
+			display: relative;
+            position: absolute;
+            z-index: 1; /* Asegura que el video esté por encima del fondo */
+            width: 967px;
+	        height: 508px;
+            margin-left: -25px;
+            margin-top: 1px;
+            padding-right: 0px;
+            border-radius: 0;
+            cursor: pointer;
+           }
+
+             	
+
+.foot {
+    height: 60px;
+    width: 1270px;
+	top: 732px;
+	margin-top: 23px;
+	margin-right: 2px;
+	margin-left: 24px;
+	margin-bottom: 3.178px;
+    border: 1px solid #0000FF; /*Bordes azules*/
+	border-top-width: 2px;
+	background-color:#1E90FF;
+    position: absolute;
+	padding:10px;
+    bottom: 0;
+	left: 15.5px;
+	border-bottom-width: 7px;
+	border-radius: 0 0 35px 35px;
+	color: #FFD700;
+        }
+		
+		#texto{
+			  width: 635px;
+			  margin-left: 77px;
+              margin-top: 2px;
+              border-left-width: 2px;
+              border-left-style: solid;
+              padding-left: 4px;
+              border-bottom-width: 2px;
+              border-bottom-style: solid;
+              padding-bottom: 1px;
+              padding-top: 1px;
+              border-top-width: 2px;
+              border-top-style: solid;
+              padding-right: 4px;
+              border-right-width: 2px;
+              border-right-style: solid;
+}
+
+h5{
+	text-align: center;
+    font-size: 24px;
+    
+}
+		
+
+/* Estilos específicos para dispositivos más grandes, como PC o tabletas */
+@media screen and (min-width: 1366px) {
+    header {
+        margin: 25px;
+    }
+}
+
+/* Estilos específicos para dispositivos medianos, como laptops, tabletas o phone */
+@media screen and (min-width: 1024px) {
+    header {
+        margin: 25px;
+    }
+}
+
+/* Estilos específicos para dispositivos pequeños, como phone mini */
+@media screen and (min-width: 506px) {
+    header {
+        margin: 12.5px;
+    }
+}

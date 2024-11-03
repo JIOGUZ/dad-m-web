@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Servicios de actualización de drivers e instalación de aplicativos">
+    <meta name="keywords" content="DADM web, drivers, controladores, aplicativos, actualización, update">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="../Css/especial.css" rel="stylesheet" type="text/css">
+    
+    <!--CODIGO JAVASCRIPT-->
+    <script src="../js/Botones-toggleListbox.js"></script>
+    <script src="../js/ToggleVideo.js"> </script>
+    <script src="../js/box_Search.js"></script>
+
+        
+    <title>DADM WEB Driver & Aplicativos</title>
+   
+</head>
+<body>
+    <div class="caja_principal">
+      <div class="mastil">
+        <div id="titulo_text-i"><h1 align="left">DAD-M WED <br> Driver's & Aplicativos</h1></div>
+        <img id="logo"
+        src="../Img/Ico/DADM WEB FULL.png"        
+        alt="Logo de la compañía"
+        width="92" 
+        height="92">
+        <div class="boton_A">
+        <a href="q-s.html">
+        <button id="boton5">QUIENES SOMOS?</button>
+        </a>
+        <a href="descargar.html"> 
+        <button id="boton6">DESCARGAR</button>
+        </a>
+        </div>
+    </div>
+    <div class="busqueda-i" id="busqueda-i">
+        <ul>        
+            <input class="box_search" type="text" placeholder="Buscar: Driver">    <!--servidor por configurar mongo y rutas-->
+            <ul>
+                <button class="botonS" id="b_search" onclick="toggleLisboxSearch()">Busqueda Avanzada</button>
+            </ul>
+        </ul> 
+           
+        <div class="boton-B" id="contenidoDinamico">
+            <script> //ver los resultados en descargar seccion escritorio
+                document.addEventListener('DOMContentLoaded', function() {
+                    var params = new URLSearchParams(window.location.search);
+                    var listbox1 = params.get('listbox1');
+                    var listbox2 = params.get('listbox2');
+                    var listbox4 = params.get('listbox4');
+                    var listbox3M = params.get('lisbox3M');
+        
+                    var resultadosDiv = document.getElementById('resultados');
+                    resultadosDiv.innerHTML = `
+                        <p>Item 1: ${listbox1}</p>
+                        <p>Item 2: ${listbox2}</p>
+                        <p>Item 4: ${listbox4}</p>
+                        <p>Item 3: ${listbox3M}</p>
+                    `;
+                });
+            </script>
+            <!-- Inicio de botones | Botones interactivos para mostrar/ocultar listas desplegables -->
+            <button id="boton1" onclick="showListbox('listbox1')">Dispositivo</button>
+            <select id="listbox1" class="listbox" onchange="updateListbox2()">
+                <option value="" disabled selected>Dispositivo</option>
+                <option value="Pc">PC</option>
+                <option value="Tablet">Tablet</option>
+                <option value="Movil">Móvil</option>
+                <option value="Portatil">Portátil</option>
+                <option value="Board">Board</option>
+            </select>
+    
+            <button id="boton2" onclick="showListbox('listbox2')" disabled>Marca</button>
+            <select id="listbox2" class="listbox" onchange="updateListbox4()">
+                <option value="" disabled selected>Marca</option>
+                <option value="Hp">HP</option>
+                <option value="Lenovo">LENOVO</option>
+                <option value="Dell">Dell</option>
+                <option value="Asus">Asus</option>
+                <option value="Apple">Apple</option>
+            </select>
+    
+            <button id="boton4" onclick="showListbox('listbox4')" disabled>S.O</button>
+            <select id="listbox4" class="listbox" onchange="updateListbox3M()">
+                <option value="" disabled selected>Sistema Operativo</option>
+                <option value="1">Windows 7</option>
+                <option value="2">Windows 8.1</option>
+                <option value="3">Windows 10</option>
+                <option value="4">Windows 11</option>
+            </select> 
+            <!-- Botón para redirigir a la página de descargas -->
+            <button id="boton3" onclick="goToDownloadPage()" disabled>Ir a Descargar</button>
+
+            <script>
+                function goToDownloadPage() {
+        // Redirigir a la página de descargas sin necesidad de un término de búsqueda
+                window.location.href = "../descargar.html";
+                }
+
+                function enableDownloadButton() {
+        // Habilitar el botón de descarga (boton3) una vez que se cumplan los requisitos
+                document.getElementById("boton3").disabled = false;
+                }
+            </script>
+
+            
+        </div>  
+    </div>
+    
+
+              <!--Lista Celular marca contenidoDinamico-->  
+        <li class="sin-puntos">
+        <select id="list-box4" style="display:none">
+        <option value="1">Xiaome</option>
+        <option value="2">Huawei</option>
+        <option value="3">HTC</option>
+        <option value="4">Appel</option>
+        <option value="5">Alcatel</option>
+        <option value="6">Motorola</option>
+        <option value="7">Nokia</option>
+        <option value="8">Samsung</option>
+        <option value="9">Sony</option>
+        <option value="10">LG</option>
+        <option value="11">Zte</option>
+        <option value="12">Asus</option>
+        <option value="13">Google</option>
+        </select>
+        </li> 
+                <!-- submenu modelo para las marcas de Movil-->
+                <!-- Xiaome -->
+        <li class="sin-puntos">
+        <select id="list-Xiaome" style="display:none">
+        <option value="1">Xiaomi 13 Ultra</option>
+        <option value="2">Xiaomi 13T</option>
+        <option value="3">Xiaomi 13 pro</option>
+        <option value="4">Xiaomi Civi 3 </option>
+        <option value="5">Xiaomi Mix Fold3</option>
+        <option value="6">Xiaomi Redmi A2+</option>
+        </select> 
+        </li>
+                
+                <!-- Huawei-->
+        <li class="sin-puntos">
+        <select id="list-Huawei" style="display:none">
+        <option value="1">Huawei Enjoy 60</option>
+        <option value="2">Huawei Enjoy 60X</option>
+        <option value="3">Huawei Honor 100</option>
+        <option value="4">Huawei Honor 100 </option>
+        <option value="5">Huawei Honor 70 Lite</option>
+        <option value="6">Huawei Honor 80 Pro Flat</option>
+        </select> 
+        </li>
+                
+                <!--HTC-->
+        <li class="sin-puntos">
+        <select id="list-HTC" style="display:none">
+        <option value="1">HTC U23</option>
+        <option value="2">HTC U23 PRO</option>
+        <option value="3">HTC Wildfire E star0</option>
+        <option value="4">HTC Wildfire E2 Play </option>
+        <option value="5">HTC Wildfire E3 lite</option>
+        </select> 
+        </li>
+                
+                <!--Apple-->
+       <li class="sin-puntos">
+       <select id="list-apple" style="display:none">
+       <option value="1">IPHONE 15</option>
+       <option value="2">IPHONE 15 PRO</option>
+       <option value="3">IPHONE 15 PLUS</option>
+       <option value="4">IPHONE 15 PRO MAX </option>
+       </select> 
+       </li>
+                
+                <!--ALCATEL-->
+      <li class="sin-puntos">
+      <select id="list-alcatel" style="display:none">
+      <option value="1">UNO-B</option>
+      <option value="2">TCL-305</option>
+      </select> 
+      </li>
+                
+                <!--MOTOROLA-->
+     <li class="sin-puntos">
+     <select id="list-moto" style="display:none">
+     <option value="1">DELY2</option>
+     <option value="2">MOTO E-13</option>
+     <option value="3">EDGE</option>
+     <option value="4">EDGE 40 </option>
+     <option value="5">EDGE 40 PLUS</option>
+     <option value="6">EDGE 40 NEO</option>
+     <option value="7">EDGE 40 PRO</option>
+     </select> 
+     </li>
+                
+                <!--NOKIA-->
+     <li class="sin-puntos">
+     <select id="list-nokia" style="display:none">
+     <option value="1">C02</option>
+     <option value="2">C110</option>
+     <option value="3">C12</option>
+     <option value="4">C12 PLUS </option>
+     <option value="5">C12 PROS</option>
+     <option value="6">C210</option>
+     <option value="7">C22</option>
+     </select> 
+     </li>
+                
+                <!--SAMSUNG-->
+     
+    <li class="sin-puntos">
+    <select id="list-samsung" style="display:none">
+    <option value="1">GALAXY A05</option>
+    <option value="2">GALAXY AO5 S</option>
+    <option value="3">GALAXY A14</option>
+    <option value="4">GALAXY A15 </option>
+    <option value="5">GALAXY A24</option>
+    <option value="6">GALAXY F04</option>
+    <option value="7">GALAXY F1</option>
+    </select> 
+    </li>
+                
+                <!--SONY-->
+   <li class="sin-puntos">
+  <select id="list-sony" style="display:none">
+  <option value="1">XPERIA 1 V</option>
+  <option value="2">XPERIA 10 V</option>
+  <option value="3">XPERIA 5 V</option>
+  </select> 
+ </li>
+                <!--LG-->
+ <li class="sin-puntos">
+ <select id="list-Lg" style="display:none">
+ <option value="1">W41</option>
+ <option value="2">W41 PRO</option>
+ <option value="3">W41 PLUS</option>
+ </select> 
+ </li>
+                
+                <!--ZTE-->
+ <li class="sin-puntos">
+ <select id="list-zte" style="display:none">
+ <option value="1">AXON 50 LITE</option>
+ <option value="2">AXON 50 ULTRA</option>
+ <option value="3">BLADE A 33S</option>
+ <option value="4">BLADE A53 </option>
+ <option value="5"> BLADE A53 PRO</option>
+ <option value="6">BLADE A53+ </option>
+ <option value="7"> BLADE A54</option>
+ </select> 
+ </li>
+       
+                
+                <!--Asus-->
+ <li class="sin-puntos">
+ <select id="list-asus" style="display:none">
+ <option value="1">Rog phone 7</option>
+ <option value="2">Rog phone 7 ultimate</option>
+ <option value="3">Zenfone 10</option>
+ </select>
+ </li>
+           
+            <!--Google-->
+ <li class="sin-puntos">
+ <select id="list-google" style="display:none">
+ <option value="1">Pixel 8</option>
+ <option value="2">Pixel 8 pro</option>
+ <option value="3">Pixel 7a</option>
+ <option value="4">pixel Pixel 7 pro</option>
+ <option value="5">Pixel 7</option>
+ </select>
+ </li>
+            
+            <!-- falta submenu modelo para las marcas de portatil-->
+            
+<li class="sin-puntos">
+<select id="list-box6" style="display:none">
+<option value="1">Board Hp</option>
+<option value="2">Board Lenovo</option>
+<option value="3">Board Dell</option>
+<option value="4">PcChips</option>
+<option value="5">Acer</option>
+<option value="6">Toshiba</option>
+<option value="7">asus</option>
+<option value="8">ECS</option>
+<option value="9">Sony</option>
+<option value="10">Msi</option>
+<option value="11">Gigabyte</option>
+<option value="12">Asrock</option>
+<option value="13">BioStart</option>
+</select>
+ </li>
+ <li>
+                 <!-- falta submenu modelo para las marcas de boards-->
+ </li>
+</ul>
+        </div>
+    </div>
+    
+   <div class="escritorio">    
+               
+            <img id= "fondo"
+            src="../Img/dadm web2.jpg"   <!--Imagen de fondo en la sección de escritorio-->
+
+            alt="Botón de Imagen">
+         
+    </div>
+    
+    <div class="foot" align="center" > <!--Pie de página con derechos de autor.-->
+       <h5 id="texto">Copyright 2024 Dad-M web Multisesion. <br> All rights reserved. 
+    <img
+       src="../Img/Ico/Logo oficial 2024.png"
+       alt="Icono de la compañia"
+       width="64px", height="32px"/></h5>
+    </div>
+</div>
+</body>
+</html>

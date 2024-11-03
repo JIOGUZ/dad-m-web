@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Servicios de actualización de drivers e instalación de aplicativos">
+    <meta name="keywords" content="DADM web, drivers, controladores, aplicativos, actualización, update">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="../Css/especial.css" rel="stylesheet" type="text/css">
+    
+    <!-- Código JavaScript -->
+    <script src="../json/Botones-toggleListbox.js"></script>
+    <script src="../json/box_Search.js"></script>
+    <title>DADM WEB MULTISESIÓN</title>
+</head>
+<body>
+    <div class="caja_principal">
+        <div class="mastil">
+            <div id="titulo_text"><h2 align="left">DAD-M WEB <br>Aplicativos</h2></div>
+            <img id="logo" src="../Img/Ico/DADM WEB FULL.png" alt="Logo de la compañía" width="92" height="92">
+            <div class="boton_A">
+                <a href="q-s.html"><button id="boton5">QUIENES SOMOS?</button></a>
+                <a href="Index.html"><button id="boton7">Home</button></a>
+            </div>
+        </div>
+    </div>      
+
+    <!-- Sección de Búsqueda -->
+    <div class="busqueda-i" id="busqueda-i">
+        <input class="box_search-D" type="text" id="searchBox" placeholder="Buscar: Aplicativo o App">
+        <button class="botonS" id="b_search-D" onclick="toggleListboxSearch()">Búsqueda Avanzada</button>
+        <img id="robotD" src="../Img/Gif/rbt15.gif" alt="Botón de Imagen">
+        <p>Busca el aplicativo para tu computadora o la app para tu tablet o celular.<br>Yo soy burbujas...</p>
+    </div>  
+    
+    <!-- Área de Resultados de Búsqueda -->
+    <div class="escritorio" id="escritorio">
+        <img id="fondo" src="../Img/dadm web2.jpg" alt="Fondo">
+        <h1>Resultados de Búsqueda</h1>
+        <div class="search-results"></div>
+    </div>
+    
+    <!-- JavaScript para Funcionalidades de Búsqueda -->
+    <script>
+        // Función para el botón de búsqueda avanzada
+        function toggleListboxSearch() {
+            const searchBox = document.getElementById('searchBox').value;
+            if (searchBox) {
+                window.location.href = `/search?query=${encodeURIComponent(searchBox)}`;
+            }
+        }
+
+        // Código para mostrar resultados de búsqueda en el escritorio
+        document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const searchTerm = urlParams.get('query');
+            
+            if (searchTerm) {
+                document.querySelector('h1').textContent = `Resultados para "${searchTerm}"`;
+
+                // Simulación de búsqueda con fetch (asegúrate de tener un servidor configurado para recibir esta búsqueda)
+                fetch(`/search?term=${encodeURIComponent(searchTerm)}`)
+                    .then(response => response.json())
+                    .then(data => displayResults(data))
+                    .catch(error => console.error("Error en la búsqueda:", error));
+            }
+        });
+
+        function displayResults(results) {
+            const resultsContainer = document.querySelector('.search-results');
+            resultsContainer.innerHTML = ''; 
+
+            if (results.length > 0) {
+                results.forEach(result => {
+                    const resultItem = document.createElement('div');
+                    resultItem.textContent = result.name;
+                    resultsContainer.appendChild(resultItem);
+                });
+            } else {
+                resultsContainer.textContent = 'No se encontraron resultados.';
+            }
+        }
+    </script>
+
+    <!-- Pie de Página -->
+    <div class="foot" align="center">
+        <h5 id="texto">
+            Copyright 2024 Dad-M web Multisesion. <br> All rights reserved.
+            <img src="../Img/Ico/Logo oficial 2024.png" alt="Icono de la compañía" width="64" height="32">
+        </h5>
+    </div>
+</body>
+</html>
